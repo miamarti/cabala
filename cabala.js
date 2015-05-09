@@ -27,7 +27,7 @@ var tableAlphabetical = {
     'Z': 8
 };
 var cabala = {
-    name: '',
+    name: 'MILLER AUGUSTO SILVA MARTINS',
     idealidade: 0,
     destino: 0,
     expressao: 0,

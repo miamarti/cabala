@@ -1,23 +1,28 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+    <!-- <h2>{{name}}</h2> -->
+
+    <form>
+        <div class="form-group">
+            <input type="text" data-ng-model="name" class="form-control" id="exampleInputEmail1" placeholder="Nome Completo">
+        </div>
+        <div class="form-group">
+            <input type="text" data-ng-model="birthday" class="form-control" id="exampleInputPassword1" placeholder="Data de Nascimento [dd/mm/yyyy]">
+        </div>
+    </form>
+
+    <p class="lead">
+        <img src="images/1.png" alt="I'm Yeoman">
+        <br> {{nameMap}}
+    </p>
+    <p><a class="btn btn-lg btn-success" data-ng-click="getCalculate()">Calcular!<span class="glyphicon glyphicon-ok"></span></a>
+    </p>
 </div>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+    <div data-ng-show="kabala.ideality">
+        <h4>Idealidade {{kabala.ideality.number}}:</h4>
+        <p>
+            {{kabala.ideality.message}}
+        </p>
+    </div>
 </div>

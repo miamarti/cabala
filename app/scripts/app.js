@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('cabalaApp', [
+angular.module('cabalaApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,18 +17,17 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]).config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+        .when('/', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl'
+        })
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+});

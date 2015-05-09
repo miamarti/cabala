@@ -7,11 +7,17 @@
  * # MainCtrl
  * Controller of the cabalaApp
  */
-angular.module('cabalaApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('cabalaApp').controller('MainCtrl', function ($scope, KabalaBO) {
+    $scope.name = 'Miller Augusto Silva Martins';
+    $scope.birthday = '24/12/1987';
+    $scope.kabala = {};
+    var $core = {
+        getCalculate: function () {
+            var kabala = new KabalaBO($scope.name, $scope.birthday);
+            $scope.kabala = kabala.getCalculate();
+            console.log(kabala.getCalculate());
+        }
+    };
+
+    $scope.getCalculate = $core.getCalculate.bind($core);
+});

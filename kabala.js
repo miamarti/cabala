@@ -1,6 +1,4 @@
 var kabala = function (name, birthday) {
-    this.name = name.toUpperCase();
-    this.nameMap = '';
     this.birthday = {
         date: birthday,
         day: {
@@ -16,20 +14,8 @@ var kabala = function (name, birthday) {
             sum: 0
         }
     };
-    this.currentDate = {
-        day: {
-            number: (new Date()).getDate(),
-            sum: 0
-        },
-        months: {
-            number: (new Date()).getMonth() + 1,
-            sum: 0
-        },
-        year: {
-            number: (new Date()).getFullYear(),
-            sum: 0
-        }
-    };
+    this.name = name.toUpperCase();
+    this.nameMap = '';
     this.ideality = {
         number: 0,
         message: ''
@@ -86,7 +72,20 @@ var kabala = function (name, birthday) {
 };
 
 kabala.prototype = {
-
+    currentDate: {
+        day: {
+            number: (new Date()).getDate(),
+            sum: 0
+        },
+        months: {
+            number: (new Date()).getMonth() + 1,
+            sum: 0
+        },
+        year: {
+            number: (new Date()).getFullYear(),
+            sum: 0
+        }
+    },
     tableAlphabetical: {
         'A': {
             numerology: 1

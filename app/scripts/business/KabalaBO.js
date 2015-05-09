@@ -442,6 +442,7 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
             this.currentDate.months.sum = this.getLimit(this.currentDate.months.number);
             this.currentDate.year.sum = this.getLimit(this.currentDate.year.number);
 
+            this.personalYear = [];
             this.personalYear.push({
                 year: this.currentDate.year.number - 1,
                 months: eval(this.birthday.months.number),
@@ -464,6 +465,7 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
             this.personalMonth.number = this.getLimit(this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.currentDate.year.sum) + this.currentDate.months.sum);
             this.personalMonth.message = this.numerology[this.personalMonth.number].personalMonth;
 
+            this.personalDay = [];
             this.personalDay.push({
                 day: this.currentDate.day.sum,
                 number: this.getLimit(this.personalMonth.number + this.currentDate.day.sum),
@@ -478,6 +480,7 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
             this.challenge.number = ((challengeStep1 - challengeStep2 > 0) ? challengeStep1 - challengeStep2 : (challengeStep1 - challengeStep2) * -1);
             this.challenge.message = this.numerology[this.challenge.number].challenge;
 
+            this.absence = [];
             for (var i = 1; i <= 9; i++) {
                 if (!(new RegExp(i.toString())).test(this.nameMap)) {
                     this.absence.push({

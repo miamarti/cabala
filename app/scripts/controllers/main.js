@@ -8,8 +8,6 @@
  * Controller of the cabalaApp
  */
 angular.module('cabalaApp').controller('MainCtrl', function ($scope, KabalaBO) {
-    $scope.name = 'Miller Augusto Silva Martins';
-    $scope.birthday = '24/12/1987';
     $scope.kabala = {};
     var $core = {
         getCalculate: function () {

@@ -14,15 +14,145 @@
         <img src="images/1.png" alt="I'm Yeoman">
         <br> {{nameMap}}
     </p>
-    <p><a class="btn btn-lg btn-success" data-ng-click="getCalculate()">Calcular!<span class="glyphicon glyphicon-ok"></span></a>
+    <p><a class="btn btn-lg btn-success" data-ng-click="getCalculate()" data-ng-show="name && birthday">Calcular!<span class="glyphicon glyphicon-ok"></span></a>
     </p>
 </div>
 
 <div class="row marketing">
+
     <div data-ng-show="kabala.ideality">
-        <h4>Idealidade {{kabala.ideality.number}}:</h4>
-        <p>
-            {{kabala.ideality.message}}
-        </p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Idealidade</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.ideality.number}}] {{kabala.ideality.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div data-ng-show="kabala.expression">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Expressão</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.expression.number}}] {{kabala.expression.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.destination">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Destino</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.destination.number}}] {{kabala.destination.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.lessonOfLife">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Lição de Vida</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.lessonOfLife.number}}] {{kabala.lessonOfLife.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.challenge">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Desafio</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.challenge.number}}] {{kabala.challenge.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.pinnacle">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Pináculo</h3>
+            </div>
+            <div class="panel-body">
+                <p data-ng-repeat="data in kabala.pinnacle">
+                    [{{data.number}}] Até os {{data.ageLimit}} anos de idade: {{data.message}}
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.personalDay">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Dia Pessoal</h3>
+            </div>
+            <div class="panel-body">
+                <p data-ng-repeat="data in kabala.personalDay">
+                    [{{data.number}}] Dia {{data.day}}: {{data.message}}
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.personalMonth">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Mês Pessoal</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.personalMonth.number}}] {{kabala.personalMonth.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.personalYear">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ano Pessoal</h3>
+            </div>
+            <div class="panel-body">
+                <p data-ng-repeat="data in kabala.personalYear">
+                    [{{data.number}}] Apartis do mês {{data.months}} de {{data.year}}: {{data.message}}
+                </p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.powerfulNumber">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Número Poderoso</h3>
+            </div>
+            <div class="panel-body">
+                [{{kabala.powerfulNumber.number}}] {{kabala.powerfulNumber.message}}
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div data-ng-show="kabala.absence">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ausência do Número</h3>
+            </div>
+            <div class="panel-body">
+                <p data-ng-repeat="data in kabala.absence">
+                    [{{data.number}}] {{data.message}}
+                    <br> Cor: {{data.color}}
+                    <br> Pedra: {{data.stone}}
+                    <br> Planeta: {{data.planet}}
+                    <br> Aroma: {{data.aroma}}
+                    <br>
+                </p>
+            </div>
+        </div>
+        <hr>
     </div>
 </div>

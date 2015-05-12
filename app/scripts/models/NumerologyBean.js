@@ -447,21 +447,21 @@ angular.module('cabalaApp').factory('NumerologyBean', [function () {
                 aroma: 'Orange blossom'
             };
             this['3'] = {
-                ideality: 'Criatividade, boa comunicação, alegre, vai sempre buscar expansão em sua vida. Tem também grande tendência a uma distorção de valores.',
-                expression: 'Sabe entreter e estimular todos, alegre, extrovertido. Passa uma imagem de expansão, crescimento e alto astral.',
-                destination: 'Ganhar reconhecimento, tanto profissional quanto social, capacidade enorme de se expandir, tanto no aspecto material como no emocional. Supera os problemas de saúde melhor que qualquer outro.',
-                lessonOfLife: 'Desenvolva sua responsabilidade.',
-                challenge: 'Não disperse seus talentos.',
-                pinnacle: 'Aproveite este período de boas ideias e desenvolva sua capacidade criadora. Mas mantenha as emoções sob controle. Bom para finanças.',
-                personalYear: 'Este ano é o ano da preguiça e de poucas responsabilidades de peso. Uma ótima época para férias prolongadas ou para a prática de algum hobby artístico. Aproveite.',
-                personalMonth: 'A seriedade não faz parte destes dias. É tempo de curtir os bons amigos e usar a sua capacidade de expressão para atividades artísticas. Vá ao teatro e leia bons livros.',
-                personalDay: 'Sorria, cante e seja otimista e procure esticar o bom astral de hoje para os outros dias do mês.',
-                powerfulNumber: 'Autoconfiante, otimista, alegre, cheio de sorte, convencido e bem sucedido.',
-                absence: 'Falta tranquilidade e segurança pessoal. Pouca capacidade de comunicação. Ser mais otimista e social.',
-                color: 'Amarela',
-                planet: 'Vênus',
-                stone: 'Topázio',
-                aroma: 'Pêssego'
+                ideality: 'Creativity, good communication, cheerful, will always seek expansion in your life. It also has great tendency to distortion values.',
+                expression: 'Knows how to entertain and encourage everyone, cheerful, outgoing. Passes an image of expansion, growth and high spirits.',
+                destination: 'Gain recognition, both professional and social, enormous capacity to expand, both in the material and on the emotional aspect. Overcomes health problems better than anyone else.',
+                lessonOfLife: 'Develop your responsibility.',
+                challenge: 'Do not disperse their talents.',
+                pinnacle: 'Enjoy this period of good ideas and develop their creative capacity. But keep emotions under control. Good for finances.',
+                personalYear: 'This year is the year of laziness and a few burden of responsibility. A great time for long vacations or to practice some artistic hobby. Enjoy.',
+                personalMonth: 'The seriousness is not part of these days. It is time to enjoy good friends and use your expression capacity for artistic activities. Go to the theater and read good books.',
+                personalDay: 'Smile, sing and be optimistic and look for stretching the good mood today for the other days of the month.',
+                powerfulNumber: 'Self-confident, optimistic, cheerful, full of luck, convinced and successful.',
+                absence: 'Lack tranquility and personal safety. Poor communication skills. Be more upbeat and social.',
+                color: 'Yellow',
+                planet: 'Venus',
+                stone: 'Topaz',
+                aroma: 'Peach'
             };
             this['4'] = {
                 ideality: 'Seriedade, estabilidade, observação, teimosia, tem dificuldades em atingir seus horizontes, vivendo assim, bastante limitada. Uma pessoa organizada, cooperativa e que se dedica muito ao trabalho.',

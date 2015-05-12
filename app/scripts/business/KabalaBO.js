@@ -1,4 +1,5 @@
 angular.module('cabalaApp').factory('KabalaBO', [function () {
+    "use strict";
     var kabala = function (name, birthday) {
         this.birthday = {
             date: birthday,
@@ -475,10 +476,12 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
             this.powerfulNumber.number = this.getLimit(this.destination.number + this.lessonOfLife.number);
             this.powerfulNumber.message = this.numerology[this.powerfulNumber.number].powerfulNumber;
 
-            var challengeStep1 = this.getLimit(((this.birthday.day.sum - this.birthday.months.sum) > 0 ? (this.birthday.day.sum - this.birthday.months.sum) : (this.birthday.day.sum - this.birthday.months.sum) * -1));
-            var challengeStep2 = this.getLimit(((this.birthday.day.sum - this.birthday.year.sum) > 0 ? (this.birthday.day.sum - this.birthday.year.sum) : (this.birthday.day.sum - this.birthday.year.sum) * -1));
-            this.challenge.number = ((challengeStep1 - challengeStep2 > 0) ? challengeStep1 - challengeStep2 : (challengeStep1 - challengeStep2) * -1);
-            this.challenge.message = this.numerology[this.challenge.number].challenge;
+            try {
+                var challengeStep1 = this.getLimit(((this.birthday.day.sum - this.birthday.months.sum) > 0 ? (this.birthday.day.sum - this.birthday.months.sum) : (this.birthday.day.sum - this.birthday.months.sum) * -1));
+                var challengeStep2 = this.getLimit(((this.birthday.day.sum - this.birthday.year.sum) > 0 ? (this.birthday.day.sum - this.birthday.year.sum) : (this.birthday.day.sum - this.birthday.year.sum) * -1));
+                this.challenge.number = ((challengeStep1 - challengeStep2 > 0) ? challengeStep1 - challengeStep2 : (challengeStep1 - challengeStep2) * -1);
+                this.challenge.message = this.numerology[this.challenge.number].challenge;
+            } catch (e) {}
 
             this.absence = [];
             for (var i = 1; i <= 9; i++) {

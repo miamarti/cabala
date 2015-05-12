@@ -5,8 +5,9 @@
  * # MainCtrl
  * Controller of the cabalaApp
  */
-angular.module('cabalaApp').controller('MainCtrl', function ($scope, KabalaBO) {
+angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryBean, KabalaBO) {
     'use strict';
+    $scope.dictionary = (new DictionaryBean()).get();
     var $core = {
         getCalculate: function () {
             $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();

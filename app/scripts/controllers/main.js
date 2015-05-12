@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name cabalaApp.controller:MainCtrl
@@ -8,6 +6,7 @@
  * Controller of the cabalaApp
  */
 angular.module('cabalaApp').controller('MainCtrl', function ($scope, KabalaBO) {
+    'use strict';
     var $core = {
         getCalculate: function () {
             $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();

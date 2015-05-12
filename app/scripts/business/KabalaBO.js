@@ -1,5 +1,5 @@
 angular.module('cabalaApp').factory('KabalaBO', [function () {
-    "use strict";
+    'use strict';
     var kabala = function (name, birthday) {
         this.birthday = {
             date: birthday,
@@ -376,10 +376,11 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
         getLimit: function (value) {
             var soma = 0;
             if (value > 9) {
-                if (value == 11 || value == 22 || value == 33) {
+                if (value === 11 || value === 22 || value === 33) {
                     return value;
                 } else {
                     for (var i = 0; i < value.toString().length; i++) {
+                        /*jslint evil: true */
                         soma += eval(value.toString()[i]);
                     }
                     if (soma > 9) {
@@ -394,9 +395,10 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
         },
 
         getCalculate: function () {
-            for (var i = 0; i < this.name.length; i++) {
-                if (this.name[i] != " ") {
-                    if (this.name[i] == "A" || this.name[i] == "E" || this.name[i] == "I" || this.name[i] == "O" || this.name[i] == "U") {
+            var i = 0;
+            for (i = 0; i < this.name.length; i++) {
+                if (this.name[i] !== ' ') {
+                    if (this.name[i] === 'A' || this.name[i] === 'E' || this.name[i] === 'I' || this.name[i] === 'O' || this.name[i] === 'U') {
                         this.ideality.number += this.tableAlphabetical[this.name[i]].numerology;
                     } else {
                         this.expression.number += this.tableAlphabetical[this.name[i]].numerology;
@@ -404,7 +406,7 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
                     this.destination.number += this.tableAlphabetical[this.name[i]].numerology;
                     this.nameMap += this.tableAlphabetical[this.name[i]].numerology;
                 } else {
-                    this.nameMap += " ";
+                    this.nameMap += ' ';
                 }
             }
             this.expression.number = this.getLimit(this.expression.number);
@@ -446,6 +448,7 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
             this.personalYear = [];
             this.personalYear.push({
                 year: this.currentDate.year.number - 1,
+                /*jslint evil: true */
                 months: eval(this.birthday.months.number),
                 number: this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.getLimit(this.currentDate.year.number - 1)),
                 message: this.numerology[this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.getLimit(this.currentDate.year.number - 1))].personalYear
@@ -484,7 +487,7 @@ angular.module('cabalaApp').factory('KabalaBO', [function () {
             } catch (e) {}
 
             this.absence = [];
-            for (var i = 1; i <= 9; i++) {
+            for (i = 1; i <= 9; i++) {
                 if (!(new RegExp(i.toString())).test(this.nameMap)) {
                     this.absence.push({
                         number: i,

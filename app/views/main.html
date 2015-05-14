@@ -3,18 +3,18 @@
 
     <form>
         <div class="form-group">
-            <input type="text" data-ng-model="name" class="form-control" id="exampleInputEmail1" placeholder="{{dictionary.fullName}}">
+            <input type="text" data-ng-model="name" data-ng-change="setReset()" class="form-control" id="exampleInputEmail1" placeholder="{{dictionary.fullName}}">
         </div>
         <div class="form-group">
             <div class="row">
                 <div class="col-md-4">
-                    <input type="number" data-ng-model="day" class="form-control" placeholder="{{dictionary.birthdayDay}}">
+                    <input type="number" data-ng-model="day" data-ng-change="setReset()" class="form-control" placeholder="{{dictionary.birthdayDay}}">
                 </div>
                 <div class="col-md-4">
-                    <input type="number" data-ng-model="month" class="form-control" placeholder="{{dictionary.birthdayMonth}}">
+                    <input type="number" data-ng-model="month" data-ng-change="setReset()" class="form-control" placeholder="{{dictionary.birthdayMonth}}">
                 </div>
                 <div class="col-md-4">
-                    <input type="number" data-ng-model="year" class="form-control" placeholder="{{dictionary.birthdayYear}}">
+                    <input type="number" data-ng-model="year" data-ng-change="setReset()" class="form-control" placeholder="{{dictionary.birthdayYear}}">
                 </div>
             </div>
         </div>

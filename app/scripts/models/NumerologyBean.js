@@ -615,6 +615,8 @@ angular.module('cabalaApp').factory('NumerologyBean', [function () {
             };
         }
     };
+
+    var docLang = ((document.documentElement.lang !== undefined) ? document.documentElement.lang : 'en');
+    return (lang[docLang] !== undefined ? lang[docLang] : lang.en);
     //return lang[window.navigator.language];
-    return lang[document.documentElement.lang];
 }]);

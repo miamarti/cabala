@@ -1,6 +1,7 @@
 angular.module('cabalaApp').factory('DictionaryBean', [function () {
     'use strict';
-    return function () {
+    var $core = function () {
+
         this.pt = {
             calculate: 'Calcular',
             fullName: 'Nome Completo',
@@ -58,7 +59,9 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
         };
 
         this.get = function () {
-            return this[document.documentElement.lang];
+            var lang = ((document.documentElement.lang !== undefined) ? document.documentElement.lang : 'en');
+            return (this[lang] !== undefined ? this[lang] : this.en);
         };
     };
+    return $core;
 }]);

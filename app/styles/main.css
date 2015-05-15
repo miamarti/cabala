@@ -135,7 +135,7 @@ body {
 .circle-group .row .col-md-4 {
     width: 33.3333333%;
     display: inline-block;
-    float: left;
+    /*float: left;*/
 }
 
 .option {

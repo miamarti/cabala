@@ -17,6 +17,7 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
     */
     var $core = {
         getCalculate: function () {
+			$('#cabalaApp').attr('data-status', 'show');
             $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();
             $scope.kabala = null;
             $scope.kabala = (new KabalaBO($scope.name, $scope.birthday)).getCalculate();

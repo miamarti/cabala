@@ -9,6 +9,12 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
     'use strict';
     $scope.dictionary = (new DictionaryBean()).get();
 
+    /*
+    $scope.name = 'Jesus Nazareno Rei Dos Judeus';
+    $scope.day = 25;
+    $scope.month = 12;
+    $scope.year = 2015;
+    */
     var $core = {
         getCalculate: function () {
             $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();

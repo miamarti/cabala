@@ -1,13 +1,17 @@
 <div class="container">
     <div class="header">
-        <h2>{{dictionary.slogan}}</h2>
+        <!-- <h2>{{dictionary.slogan}}</h2> -->
         <h3>Fate</h3>
         <div class="user-area">
             <input type="text" data-ng-model="name" data-ng-change="setReset()" id="exampleInputEmail1" placeholder="{{dictionary.fullName}}">
+            <div class="ico"><i class="fa fa-user"></i>
+            </div>
         </div>
         <div class="user-area birthday">
             <div class="col">
                 <input type="number" data-ng-model="day" data-ng-change="setReset()" placeholder="{{dictionary.birthdayDay}}">
+                <div class="ico"><i class="fa fa-birthday-cake"></i>
+                </div>
             </div>
             <div class="col">
                 <input type="number" data-ng-model="month" data-ng-change="setReset()" placeholder="{{dictionary.birthdayMonth}}">
@@ -21,131 +25,335 @@
         </p>
     </div>
 
-    <div class="result row marketing">
-
-        <div data-ng-show="kabala.ideality">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.ideality}}</h3>
+    <div class="circle-group" data-ng-show="kabala">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".ideality">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.ideality}}</div>
                 </div>
-                <div class="panel-body">
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".expression">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.expression}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".destination">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-paper-plane-o fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.destination}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <div class="circle-group" data-ng-show="kabala">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".lessonOfLife">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-child fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.lessonOfLife}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".challenge">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.challenge}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".pinnacle">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.pinnacle}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <div class="circle-group" data-ng-show="kabala">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".personnelDay">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-sun-o fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.personnelDay}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".personnelMonth">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.personnelMonth}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".personnelYear">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.personnelYear}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <div class="circle-group" data-ng-show="kabala">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".powerfulNumber">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-bomb fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.powerfulNumber}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="option" data-toggle="modal" data-target=".numberOfAbsence">
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-plug fa-stack-1x fa-inverse"></i>
+                </span>
+                    <div>{{dictionary.numberOfAbsence}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade ideality" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.ideality}}</h4>
+                </div>
+                <div class="modal-body">
                     [{{kabala.ideality.number}}] {{kabala.ideality.message}}
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
-        <div data-ng-show="kabala.expression">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.expression}}</h3>
+    <div class="modal fade expression" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.expression}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     [{{kabala.expression.number}}] {{kabala.expression.message}}
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.destination">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.destination}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade destination" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.destination}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     [{{kabala.destination.number}}] {{kabala.destination.message}}
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.lessonOfLife">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.lessonOfLife}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade lessonOfLife" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.lessonOfLife}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     [{{kabala.lessonOfLife.number}}] {{kabala.lessonOfLife.message}}
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.challenge">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.challenge}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade challenge" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.challenge}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     [{{kabala.challenge.number}}] {{kabala.challenge.message}}
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.pinnacle">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.pinnacle}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade pinnacle" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.pinnacle}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     <p data-ng-repeat="data in kabala.pinnacle">
                         [{{data.number}}] {{dictionary.upTo}} {{data.ageLimit}} {{dictionary.yearsOld}}: {{data.message}}
                     </p>
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.personalDay">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.personnelDay}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade personnelDay" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.personnelDay}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     <p data-ng-repeat="data in kabala.personalDay">
                         [{{data.number}}] {{dictionary.day}} {{data.day}}: {{data.message}}
                     </p>
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.personalMonth">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.personnelMonth}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade personnelMonth" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.personnelMonth}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     [{{kabala.personalMonth.number}}] {{kabala.personalMonth.message}}
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.personalYear">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.personnelYear}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade personnelYear" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.personnelYear}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     <p data-ng-repeat="data in kabala.personalYear">
                         [{{data.number}}] {{dictionary.theBreakingOfTheMonth}} {{data.months}} - {{data.year}}: {{data.message}}
                     </p>
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.powerfulNumber">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.powerfulNumber}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade powerfulNumber" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.powerfulNumber}}</h4>
                 </div>
-                <div class="panel-body">
-                    [{{kabala.powerfulNumber.number}}] {{kabala.powerfulNumber.message}}
+                <div class="modal-body">
+                    <p data-ng-repeat="data in kabala.personalDay">
+                        [{{kabala.powerfulNumber.number}}] {{kabala.powerfulNumber.message}}
+                    </p>
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
-        <div data-ng-show="kabala.absence">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{dictionary.numberOfAbsence}}</h3>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade numberOfAbsence" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.numberOfAbsence}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="modal-body">
                     <p data-ng-repeat="data in kabala.absence">
                         [{{data.number}}] {{data.message}}
                         <br> {{dictionary.color}}: {{data.color}}
@@ -156,10 +364,10 @@
                     </p>
                 </div>
             </div>
-            <hr>
+            <!-- /.modal-content -->
         </div>
+        <!-- /.modal-dialog -->
     </div>
+    <!-- /.modal -->
 
-    <div class="footer">
-    </div>
 </div>

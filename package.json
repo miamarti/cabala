@@ -2,7 +2,8 @@
   "name": "cabala",
   "version": "0.0.0",
   "dependencies": {
-    "firebase": "~2.2.4"
+    "firebase": "~2.2.4",
+    "jasmine": "^2.3.1"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

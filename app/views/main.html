@@ -9,15 +9,15 @@
         </div>
         <div class="user-area birthday">
             <div class="col">
-                <input type="number" data-ng-model="day" data-ng-change="setReset()" placeholder="{{dictionary.birthdayDay}}">
+                <input type="number" maxlength="2" size="2" data-ng-model="day" data-ng-change="setReset()" placeholder="{{dictionary.birthdayDay}}">
                 <div class="ico"><i class="fa fa-birthday-cake"></i>
                 </div>
             </div>
             <div class="col">
-                <input type="number" data-ng-model="month" data-ng-change="setReset()" placeholder="{{dictionary.birthdayMonth}}">
+                <input type="number" maxlength="2" size="2" data-ng-model="month" data-ng-change="setReset()" placeholder="{{dictionary.birthdayMonth}}">
             </div>
             <div class="col">
-                <input type="number" data-ng-model="year" data-ng-change="setReset()" placeholder="{{dictionary.birthdayYear}}">
+                <input type="number" maxlength="4" size="4" data-ng-model="year" data-ng-change="setReset()" placeholder="{{dictionary.birthdayYear}}">
             </div>
         </div>
         <p>

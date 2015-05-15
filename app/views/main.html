@@ -1,155 +1,154 @@
 <div id="fateContainer" class="container">
-	
+
     <div class="header">
         <!-- <h2>{{dictionary.slogan}}</h2> -->
         <h3>Fate</h3>
         <div class="user-area">
-            <input type="text" data-ng-model="name" data-ng-change="setReset()" id="exampleInputEmail1" placeholder="{{dictionary.fullName}}">
+            <input type="text" data-ng-model="name" data-ng-change="keyUp()" id="exampleInputEmail1" placeholder="{{dictionary.fullName}}">
             <div class="ico"><i class="fa fa-user"></i>
             </div>
         </div>
         <div class="user-area birthday">
             <div class="col">
-                <input type="number" maxlength="2" size="2" data-ng-model="day" data-ng-change="setReset()" placeholder="{{dictionary.birthdayDay}}">
+                <input type="number" maxlength="2" size="2" data-ng-model="day" data-ng-change="keyUp()" placeholder="{{dictionary.birthdayDay}}">
                 <div class="ico"><i class="fa fa-birthday-cake"></i>
                 </div>
             </div>
             <div class="col">
-                <input type="number" maxlength="2" size="2" data-ng-model="month" data-ng-change="setReset()" placeholder="{{dictionary.birthdayMonth}}">
+                <input type="number" maxlength="2" size="2" data-ng-model="month" data-ng-change="keyUp()" placeholder="{{dictionary.birthdayMonth}}">
             </div>
             <div class="col">
-                <input type="number" maxlength="4" size="4" data-ng-model="year" data-ng-change="setReset()" placeholder="{{dictionary.birthdayYear}}">
+                <input type="number" maxlength="4" size="4" data-ng-model="year" data-ng-change="keyUp()" placeholder="{{dictionary.birthdayYear}}">
             </div>
         </div>
-        <p>
-            <a class="btn btn-lg btn-success" data-ng-click="getCalculate()" data-ng-show="name && day && month && year">{{dictionary.calculate}}!<span class="glyphicon glyphicon-ok"></span></a>
-        </p>
     </div>
 
-    <div class="circle-group" data-ng-show="kabala">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".ideality">
-                    <span class="fa-stack fa-lg">
+    <div class="fateContainerResult" data-ng-show="kabala">
+
+        <div class="circle-group" data-ng-show="kabala">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".ideality">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.ideality}}</div>
+                        <div>{{dictionary.ideality}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".expression">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".expression">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.expression}}</div>
+                        <div>{{dictionary.expression}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".destination">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".destination">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-paper-plane-o fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.destination}}</div>
+                        <div>{{dictionary.destination}}</div>
+                    </div>
                 </div>
             </div>
+            <div class="footer"></div>
         </div>
-        <div class="footer"></div>
-    </div>
 
-    <div class="circle-group" data-ng-show="kabala">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".lessonOfLife">
-                    <span class="fa-stack fa-lg">
+        <div class="circle-group" data-ng-show="kabala">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".lessonOfLife">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-child fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.lessonOfLife}}</div>
+                        <div>{{dictionary.lessonOfLife}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".challenge">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".challenge">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.challenge}}</div>
+                        <div>{{dictionary.challenge}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".pinnacle">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".pinnacle">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.pinnacle}}</div>
+                        <div>{{dictionary.pinnacle}}</div>
+                    </div>
                 </div>
             </div>
+            <div class="footer"></div>
         </div>
-        <div class="footer"></div>
-    </div>
 
-    <div class="circle-group" data-ng-show="kabala">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".personnelDay">
-                    <span class="fa-stack fa-lg">
+        <div class="circle-group" data-ng-show="kabala">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".personnelDay">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-sun-o fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.personnelDay}}</div>
+                        <div>{{dictionary.personnelDay}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".personnelMonth">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".personnelMonth">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.personnelMonth}}</div>
+                        <div>{{dictionary.personnelMonth}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".personnelYear">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".personnelYear">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-calendar-o fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.personnelYear}}</div>
+                        <div>{{dictionary.personnelYear}}</div>
+                    </div>
                 </div>
             </div>
+            <div class="footer"></div>
         </div>
-        <div class="footer"></div>
-    </div>
 
-    <div class="circle-group" data-ng-show="kabala">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".powerfulNumber">
-                    <span class="fa-stack fa-lg">
+        <div class="circle-group" data-ng-show="kabala">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".powerfulNumber">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-bomb fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.powerfulNumber}}</div>
+                        <div>{{dictionary.powerfulNumber}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="option" data-toggle="modal" data-target=".numberOfAbsence">
-                    <span class="fa-stack fa-lg">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".numberOfAbsence">
+                        <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-plug fa-stack-1x fa-inverse"></i>
                 </span>
-                    <div>{{dictionary.numberOfAbsence}}</div>
+                        <div>{{dictionary.numberOfAbsence}}</div>
+                    </div>
                 </div>
             </div>
+            <div class="footer"></div>
         </div>
-        <div class="footer"></div>
+
     </div>
-
-
 
 
 

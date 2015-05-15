@@ -3,6 +3,7 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
     var $core = function () {
 
         this.pt = {
+            slogan: 'Uma pequena pitada do destino',
             calculate: 'Calcular',
             fullName: 'Nome Completo',
             birthdayDay: 'Dia do aniversário',
@@ -31,6 +32,7 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
         };
 
         this.en = {
+            slogan: 'A small pinch of destiny',
             calculate: 'Calculate',
             fullName: 'Full Name',
             birthdayDay: 'Birthday Day',

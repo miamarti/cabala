@@ -105,12 +105,14 @@ angular.module('cabalaApp').factory('KabalaBO', ['TableAlphabeticalBean', 'Numer
             });
             this.personalYear.push({
                 year: this.currentDate.year.number,
+                /*jslint evil: true */
                 months: eval(this.birthday.months.number),
                 number: this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.currentDate.year.sum),
                 message: this.numerology[this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.currentDate.year.sum)].personalYear
             });
             this.personalYear.push({
                 year: this.currentDate.year.number + 1,
+                /*jslint evil: true */
                 months: eval(this.birthday.months.number),
                 number: this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.getLimit(this.currentDate.year.number + 1)),
                 message: this.numerology[this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.getLimit(this.currentDate.year.number + 1))].personalYear

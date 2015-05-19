@@ -28,7 +28,15 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
             day: 'Dia',
             upTo: 'Até os',
             yearsOld: 'anos de idade',
-            kabbalah: 'Cabala'
+            kabbalah: 'Cabala',
+            family: 'Família',
+            head: 'Cabeça',
+            heart: 'Coração',
+            mission: 'Missão',
+            sex: 'Sexualidade',
+            commandOfLife: 'Comando da vida',
+            hereditaryKarma: 'Karma Hereditário',
+            hebrew: 'Hebraica'
         };
 
         this.en = {
@@ -57,7 +65,15 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
             day: 'Day',
             upTo: 'Up to',
             yearsOld: 'years old',
-            kabbalah: 'Kabbalah'
+            kabbalah: 'Kabbalah',
+            family: 'Family',
+            head: 'Head',
+            heart: 'Heart',
+            mission: 'Mission',
+            sex: 'Sex',
+            commandOfLife: 'Command Of Life',
+            hereditaryKarma: 'Hereditary Karma',
+            hebrew: 'Hebrew'
         };
 
         this.get = function () {

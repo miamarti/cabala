@@ -12,11 +12,24 @@ angular.module('cabalaApp').factory('LimitBO', [function () {
                         soma += eval(value.toString()[i]);
                     }
                     if (soma > 9) {
-                        return this.getLimit(soma);
+                        return new Core().getLimit(soma);
                     } else {
                         return soma;
                     }
                 }
+            } else {
+                return value;
+            }
+        };
+
+        this.getLimit22 = function (value) {
+            if (value > 22) {
+                var refNum = value.toString();
+                var sum = 0;
+                for (var i = 0; i < refNum.length; i++) {
+                    sum += eval(refNum[i]);
+                }
+                return new Core().getLimit22(sum);
             } else {
                 return value;
             }

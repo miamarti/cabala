@@ -73,7 +73,7 @@
                     <div class="option" data-toggle="modal" data-target=".challenge">
                         <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
+                  <i class="fa fa-fire fa-stack-1x fa-inverse"></i>
                 </span>
                         <div>{{dictionary.challenge}}</div>
                     </div>
@@ -142,6 +142,81 @@
                   <i class="fa fa-plug fa-stack-1x fa-inverse"></i>
                 </span>
                         <div>{{dictionary.numberOfAbsence}}</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".family">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.family}} [kabbalah]</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+
+        <div class="circle-group" data-ng-show="kabala">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".head">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.head}} [kabbalah]</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".heart">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-heart-o fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.heart}} [kabbalah]</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".mission">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-diamond fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.mission}} [kabbalah]</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+
+        <div class="circle-group" data-ng-show="kabala">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".sex">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-venus-mars fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.sex}} [kabbalah]</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".commandOfLife">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-gamepad fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.commandOfLife}} [kabbalah {{dictionary.hebrew}}]</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option" data-toggle="modal" data-target=".hereditaryKarma">
+                        <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-anchor fa-stack-1x fa-inverse"></i>
+                </span>
+                        <div>{{dictionary.hereditaryKarma}} [kabbalah {{dictionary.hebrew}}]</div>
                     </div>
                 </div>
             </div>
@@ -362,6 +437,132 @@
                         <br> {{dictionary.aroma}}: {{data.aroma}}
                         <br>
                     </p>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade family" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.family}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.wheelSamsara.family.sum}}] {{treeOfLife.wheelSamsara.family.message}}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade head" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.head}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.wheelSamsara.head.sum}}] {{treeOfLife.wheelSamsara.head.message}}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade heart" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.heart}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.wheelSamsara.heart.sum}}] {{treeOfLife.wheelSamsara.heart.message}}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade mission" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.mission}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.wheelSamsara.mission.sum}}] {{treeOfLife.wheelSamsara.mission.message}}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade sex" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.sex}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.wheelSamsara.sex.sum}}] {{treeOfLife.wheelSamsara.sex.message}}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade commandOfLife" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.commandOfLife}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.kabbalahHebrew.commandOfLife.sum}}] {{treeOfLife.kabbalahHebrew.commandOfLife.message}}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal fade hereditaryKarma" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myLargeModalLabel">{{dictionary.hereditaryKarma}}</h4>
+                </div>
+                <div class="modal-body">
+                    [{{treeOfLife.kabbalahHebrew.hereditaryKarma.sum}}] {{treeOfLife.kabbalahHebrew.hereditaryKarma.message}}
                 </div>
             </div>
             <!-- /.modal-content -->

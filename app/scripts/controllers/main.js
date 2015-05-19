@@ -5,7 +5,7 @@
  * # MainCtrl
  * Controller of the cabalaApp
  */
-angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryBean, KabalaBO) {
+angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryBean, KabalaBO, TreeOfLifeBO) {
     'use strict';
     $scope.dictionary = (new DictionaryBean()).get();
 
@@ -16,8 +16,8 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
     $scope.year = 2015;
     */
     var $core = {
-        main : function(){
-            if(typeof(Storage) !== "undefined") {
+        main: function () {
+            if (typeof (Storage) !== "undefined") {
                 $scope.name = localStorage.getItem("name");
                 $scope.day = eval(localStorage.getItem("day"));
                 $scope.month = eval(localStorage.getItem("month"));
@@ -36,9 +36,11 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
             $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();
             $scope.kabala = null;
             $scope.kabala = (new KabalaBO($scope.name.specialCharacters(), $scope.birthday)).getCalculate();
+            $scope.treeOfLife = (new TreeOfLifeBO($scope.name.specialCharacters())).getCalculate();
+
             $core.setAnim('bounce');
 
-            if(typeof(Storage) !== "undefined") {
+            if (typeof (Storage) !== "undefined") {
                 localStorage.setItem("name", $scope.name.specialCharacters());
                 localStorage.setItem("day", $scope.day.toString());
                 localStorage.setItem("month", $scope.month.toString());
@@ -48,7 +50,7 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
         setReset: function () {
             $scope.kabala = false;
             $('#cabalaApp').attr('data-status', 'edit');
-            if(typeof(Storage) !== "undefined") {
+            if (typeof (Storage) !== "undefined") {
                 localStorage.setItem("name", '');
                 localStorage.setItem("day", undefined);
                 localStorage.setItem("month", undefined);

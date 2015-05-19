@@ -1,5 +1,6 @@
 angular.module('cabalaApp').factory('KabalaBO', ['TableAlphabeticalBean', 'NumerologyBean', 'MessageBean', 'MessageAgeBean', 'BirthdayBean', 'CurrentDateBean', 'LimitBO', function (TableAlphabeticalBean, NumerologyBean, MessageBean, MessageAgeBean, BirthdayBean, CurrentDateBean, LimitBO) {
     'use strict';
+	
     var kabala = function (name, birthday) {
         this.birthday = new BirthdayBean(birthday);
         this.name = name.toUpperCase();
@@ -120,6 +121,7 @@ angular.module('cabalaApp').factory('KabalaBO', ['TableAlphabeticalBean', 'Numer
         },
 
         setPersonalMonth: function () {
+			this.personalMonth.month = this.currentDate.months.number;
             this.personalMonth.number = this.getLimit(this.getLimit(this.birthday.day.sum + this.birthday.months.sum + this.currentDate.year.sum) + this.currentDate.months.sum);
             this.personalMonth.message = this.numerology[this.personalMonth.number].personalMonth;
         },
@@ -127,7 +129,7 @@ angular.module('cabalaApp').factory('KabalaBO', ['TableAlphabeticalBean', 'Numer
         setPersonalDay: function () {
             this.personalDay = [];
             this.personalDay.push({
-                day: this.currentDate.day.sum,
+                day: this.currentDate.day.number,
                 number: this.getLimit(this.personalMonth.number + this.currentDate.day.sum),
                 message: this.numerology[this.getLimit(this.personalMonth.number + this.currentDate.day.sum)].personalDay
             });
@@ -208,6 +210,6 @@ angular.module('cabalaApp').factory('KabalaBO', ['TableAlphabeticalBean', 'Numer
             return this;
         }
     };
-
+	
     return kabala;
 }]);

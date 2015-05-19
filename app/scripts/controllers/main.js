@@ -35,9 +35,9 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
             $('#cabalaApp').attr('data-status', 'show');
             $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();
             $scope.kabala = null;
+			$scope.treeOfLife = null;
             $scope.kabala = (new KabalaBO($scope.name.specialCharacters(), $scope.birthday)).getCalculate();
             $scope.treeOfLife = (new TreeOfLifeBO($scope.name.specialCharacters())).getCalculate();
-
             $core.setAnim('bounce');
 
             if (typeof (Storage) !== "undefined") {

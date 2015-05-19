@@ -36,7 +36,8 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
             sex: 'Sexualidade',
             commandOfLife: 'Comando da vida',
             hereditaryKarma: 'Karma Hereditário',
-            hebrew: 'Hebraica'
+            hebrew: 'Hebraica',
+			month: 'Mês'
         };
 
         this.en = {
@@ -73,7 +74,8 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
             sex: 'Sex',
             commandOfLife: 'Command Of Life',
             hereditaryKarma: 'Hereditary Karma',
-            hebrew: 'Hebrew'
+            hebrew: 'Hebrew',
+			month: 'Month'
         };
 
         this.get = function () {

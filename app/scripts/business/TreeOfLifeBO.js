@@ -24,7 +24,7 @@ angular.module('cabalaApp').factory('TreeOfLifeBO', ['WheelSamsaraBean', 'MagicA
         },
         wheelSamsara: undefined,
 
-        calculateNameMaps: function () {
+        calculateNameMaps: function (callback) {
             treeOfLife.name = treeOfLife.name.trim();
             var isEquals = false;
             var mapName = '';
@@ -71,6 +71,7 @@ angular.module('cabalaApp').factory('TreeOfLifeBO', ['WheelSamsaraBean', 'MagicA
                     sum: limit22(adot.length)
                 }
             };
+			callback();
         },
 
         calculateKabbalahHebrew: function () {
@@ -80,13 +81,16 @@ angular.module('cabalaApp').factory('TreeOfLifeBO', ['WheelSamsaraBean', 'MagicA
                 treeOfLife.firstName += nameSplit[i] + ' ';
             }
 
+			treeOfLife.kabbalahHebrew.commandOfLife.sum = 0;
             for (var i = 0; i < treeOfLife.firstName.length; i++) {
                 if (treeOfLife.name[i] !== ' ') {
-                    treeOfLife.kabbalahHebrew.commandOfLife.sum += kabbalah[treeOfLife.firstName[i]];
+					if(kabbalah[treeOfLife.firstName[i]] != undefined){
+                    	treeOfLife.kabbalahHebrew.commandOfLife.sum += kabbalah[treeOfLife.firstName[i]];
+					}
                 }
             }
             treeOfLife.kabbalahHebrew.commandOfLife.message = magicAndMeaningOfNumbers[sumMax(treeOfLife.kabbalahHebrew.commandOfLife.sum)];
-
+			
             for (var i = 0; i < treeOfLife.surname.length; i++) {
                 if (treeOfLife.name[i] !== ' ') {
                     treeOfLife.kabbalahHebrew.hereditaryKarma.sum += kabbalah[treeOfLife.surname[i]];
@@ -204,9 +208,10 @@ angular.module('cabalaApp').factory('TreeOfLifeBO', ['WheelSamsaraBean', 'MagicA
 
         run: function (name) {
             treeOfLife.name = name;
-            treeOfLife.calculateNameMaps();
-            treeOfLife.calculateKabbalahHebrew();
-            treeOfLife.calculateWheelSamsara();
+            treeOfLife.calculateNameMaps(function(){
+            	treeOfLife.calculateKabbalahHebrew();
+            	treeOfLife.calculateWheelSamsara();
+			});
             return this;
         }
     };

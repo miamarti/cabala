@@ -2,7 +2,9 @@
 [![Build Status](https://travis-ci.org/alexgibson/notify.js.png?branch=master)](https://github.com/miamarti/cabala.git)
 
 Uma pequena pidata do destino!
+Saiba mais sobre você e as outras pessoas e mergulhe no sucesso.
+Aplicativo voltado a Numerologia e Esoterismo, com propósito de orientar e auxiliar na criação de sua auto análise, possibilitando um maior entendimento dos momentos de sua vida.
 
-Para instalar o app em seu telefone, acesse [https://build.phonegap.com/apps/1457131/share] ou leia o QRCode abaixo:
+Para instalar o app em seu telefone, acesse [https://goo.gl/Dc1pqb] ou leia o QRCode abaixo:
 
-<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://build.phonegap.com/apps/1457131/install/KHh-RPYT-EYZ9D-GvbrW&chld=L|1&choe=UTF-8">
+<img src="http://chart.googleapis.com/chart?cht=qr&chs=250x250&choe=UTF-8&chld=H&chl=https://goo.gl/Dc1pqb">

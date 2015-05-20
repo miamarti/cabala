@@ -84,12 +84,14 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
                 console.log('Failed to validate field type');
             }
             try {
-                if($scope.day.toString().length >= 2){
+                /*
+                if($scope.day.toString().length == 2){
                     $('[data-ng-model="month"]').focus();
                 }
-                if($scope.month.toString().length >= 2){
+                if($scope.month.toString().length == 2){
                     $('[data-ng-model="year"]').focus();
                 }
+                */
                 if (($scope.name.toString().length > 5) && ($scope.day.toString().length === 1 || $scope.day.toString().length === 2) && ($scope.month.toString().length === 1 || $scope.month.toString().length === 2) && ($scope.year.toString().length === 4)) {
                     $core.getCalculate();
                 } else {

@@ -16,6 +16,12 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
     $scope.year = 2015;
     */
     var $core = {
+        size : {
+                windowWidth: window.innerWidth,
+                windowHeight: window.innerHeight,
+                screenWidth: screen.width,
+                screenHeight: screen.height
+        },
         main: function () {
             if (typeof (Storage) !== "undefined") {
                 $scope.name = localStorage.getItem("name");
@@ -47,7 +53,7 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
                 localStorage.setItem("year", $scope.year.toString());
             }
         },
-        setReset: function () {
+        setReset: function (all) {
             $scope.kabala = false;
             $('#cabalaApp').attr('data-status', 'edit');
             if (typeof (Storage) !== "undefined") {
@@ -56,9 +62,34 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
                 localStorage.setItem("month", undefined);
                 localStorage.setItem("year", undefined);
             }
+            if(all){
+                $scope.name = undefined;
+                $scope.day = null;
+                $scope.month = null;
+                $scope.year = null;
+            }
         },
         keyUp: function () {
+            try{
+                if(typeof $scope.day !== 'number' || $scope.day < 0){
+                    $scope.day = null;
+                }
+                if(typeof $scope.month !== 'number' || $scope.month < 0){
+                    $scope.month = null;
+                }
+                if(typeof $scope.year !== 'number' || $scope.year < 0){
+                    $scope.year = null;
+                }
+            } catch (e) {
+                console.log('Failed to validate field type');
+            }
             try {
+                if($scope.day.toString().length >= 2){
+                    $('[data-ng-model="month"]').focus();
+                }
+                if($scope.month.toString().length >= 2){
+                    $('[data-ng-model="year"]').focus();
+                }
                 if (($scope.name.toString().length > 5) && ($scope.day.toString().length === 1 || $scope.day.toString().length === 2) && ($scope.month.toString().length === 1 || $scope.month.toString().length === 2) && ($scope.year.toString().length === 4)) {
                     $core.getCalculate();
                 } else {
@@ -69,9 +100,10 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
             }
         }
     };
-
+    
     $scope.getCalculate = $core.getCalculate;
     $scope.setReset = $core.setReset;
+    $scope.$parent.setReset = $core.setReset.bind($core);
     $scope.keyUp = $core.keyUp;
     $core.main();
 });

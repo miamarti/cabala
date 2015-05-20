@@ -30,7 +30,8 @@ angular.module('cabalaApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mobile-angular-ui'
   ]).config(function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/main.html',

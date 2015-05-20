@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.css" />
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -36,13 +39,46 @@
     <link rel="icon" type="image/png" sizes="16x16" href="res/icon/android/icon-16.png">
 </head>
 
-<body id="cabalaApp" ng-app="cabalaApp" data-status="edit">
+<body id="cabalaApp" ng-app="cabalaApp" data-status="edit" ng-swipe-right='Ui.turnOn("uiSidebarLeft")' ng-swipe-left='Ui.turnOff("uiSidebarLeft")'>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view=""></div>
+      <!-- Sidebars -->
+      <div class="sidebar sidebar-left">
+          <div class="scrollable">
+            <h1 class="scrollable-header app-name">Fate</h1>  
+            <div class="scrollable-content">
+              <div class="list-group" ui-turn-off='uiSidebarLeft'>
+                <a class="list-group-item" href="#/">Visão Geral <i class="fa fa-chevron-right pull-right"></i></a>
+                <a class="list-group-item" href="#/setReset" data-ng-click="setReset(true)">Novo Cálculo <i class="fa fa-chevron-right pull-right"></i></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    
+      <!--
+        <div class="sidebar sidebar-right">...</div>
+      -->
 
+      <div class="app">
+        <!--
+        <div class="navbar navbar-app navbar-absolute-top"></div>
+        <div class="navbar navbar-app navbar-absolute-bottom"></div>
+        -->
+    
+        <!-- App body -->
+
+        <div class='app-body'>
+          <div class='app-content'>
+            <ng-view></ng-view>
+          </div>
+        </div>
+      </div><!-- ~ .app -->
+
+      <!-- Modals and Overlays -->
+      <div ui-yield-to="modals"></div>
+    
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -66,6 +102,8 @@
     <script src="bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+    <script src="bower_components/angular-swipe/dist/angular-swipe.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

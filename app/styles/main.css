@@ -25,9 +25,13 @@ body {
 .modal-footer {}
 
 .btn-menu {
-    position: fixed;
-    left: 13px;
-    top: 13px;
+    position: static;
+    left: 0px;
+    top: 0px;
+    z-index: 9999;
+    width: 100px;
+    height: 20px;
+    padding: 20px;
 }
 
 [data-status="edit"] .app-body,

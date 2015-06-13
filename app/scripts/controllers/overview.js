@@ -18,6 +18,9 @@ angular.module('cabalaApp').controller('OverviewCtrl', function ($scope, Diction
                 $scope.year = eval(localStorage.getItem("year"));
                 $core.setReset();
                 $core.run();
+                if ($scope.name === '') {
+                    location.assign("#login");
+                }
             }
         },
         setAnim: function (x) {

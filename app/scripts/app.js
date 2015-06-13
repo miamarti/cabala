@@ -33,7 +33,7 @@ angular.module('cabalaApp', [
     'ngTouch',
     'mobile-angular-ui'
   ]).config(function ($routeProvider) {
-    $routeProvider.when('/', {
+    $routeProvider.when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
     }).when('/main', {
@@ -42,7 +42,10 @@ angular.module('cabalaApp', [
     }).when('/overview', {
         templateUrl: 'views/overview.html',
         controller: 'OverviewCtrl'
+    }).when('/ads', {
+        templateUrl: 'views/ads.html',
+        controller: 'AdsCtrl'
     }).otherwise({
-        redirectTo: '/'
+        redirectTo: '/ads'
     });
 });

@@ -46,6 +46,6 @@ angular.module('cabalaApp', [
         templateUrl: 'views/ads.html',
         controller: 'AdsCtrl'
     }).otherwise({
-        redirectTo: '/ads'
+        redirectTo: '/login'
     });
 });

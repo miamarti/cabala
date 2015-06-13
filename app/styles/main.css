@@ -22,6 +22,12 @@ body {
     background: #FFF;
 }
 
+.info {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
 .modal-footer {}
 
 .btn-menu {
@@ -202,7 +208,7 @@ h1.scrollable-header.app-name {
 }
 
 [data-status="edit"] .header h3 {
-    line-height: 350%;
+    line-height: 275%;
 }
 
 .circle-group .row {

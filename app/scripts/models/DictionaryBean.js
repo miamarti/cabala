@@ -37,11 +37,16 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
             commandOfLife: 'Comando da vida',
             hereditaryKarma: 'Karma Hereditário',
             hebrew: 'Hebraica',
-			month: 'Mês',
+            month: 'Mês',
             close: 'Fechar',
             theirNumberIs: 'Seu número é o',
             theRestOfYourLife: 'O restante de sua vida',
-            lackNumber: 'Falta do número'
+            lackNumber: 'Falta do número',
+            'relationships': 'Relações pessoais',
+            'work': 'No trabalho',
+            'description': 'Descrição',
+            'characteristics': 'Características',
+            'signs': 'Sígno'
         };
 
         this.en = {
@@ -79,11 +84,16 @@ angular.module('cabalaApp').factory('DictionaryBean', [function () {
             commandOfLife: 'Command Of Life',
             hereditaryKarma: 'Hereditary Karma',
             hebrew: 'Hebrew',
-			month: 'Month',
+            month: 'Month',
             close: 'Close',
             theirNumberIs: 'Their number is',
             theRestOfYourLife: 'The rest of your life',
-            lackNumber: 'Lack number'
+            lackNumber: 'Lack number',
+            'relationships': 'Personal relationships',
+            'work': 'At work',
+            'description': 'Description',
+            'characteristics': 'Characteristics',
+            'signs': 'Signs'
         };
 
         this.get = function () {

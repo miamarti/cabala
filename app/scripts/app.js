@@ -34,8 +34,14 @@ angular.module('cabalaApp', [
     'mobile-angular-ui'
   ]).config(function ($routeProvider) {
     $routeProvider.when('/', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
+    }).when('/main', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+    }).when('/overview', {
+        templateUrl: 'views/overview.html',
+        controller: 'OverviewCtrl'
     }).otherwise({
         redirectTo: '/'
     });

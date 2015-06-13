@@ -5,7 +5,7 @@
  * # MainCtrl
  * Controller of the cabalaApp
  */
-angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryBean, KabalaBO, TreeOfLifeBO, SignsBO) {
+angular.module('cabalaApp').controller('OverviewCtrl', function ($scope, DictionaryBean, KabalaBO, TreeOfLifeBO) {
     'use strict';
     $scope.dictionary = (new DictionaryBean()).get();
 
@@ -27,9 +27,12 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
         },
         getCalculate: function () {
             $('#cabalaApp').attr('data-status', 'show');
+            $scope.birthday = $scope.day.toString() + '/' + $scope.month.toString() + '/' + $scope.year.toString();
+            $scope.kabala = null;
+            $scope.treeOfLife = null;
+            $scope.kabala = (new KabalaBO($scope.name.specialCharacters(), $scope.birthday)).getCalculate();
+            $scope.treeOfLife = (new TreeOfLifeBO($scope.name.specialCharacters())).getCalculate();
             $core.setAnim('bounce');
-            $scope.signs = SignsBO.get($scope.day, $scope.month);
-            console.log($scope.signs);
 
             if (typeof (Storage) !== "undefined") {
                 localStorage.setItem("name", $scope.name.specialCharacters());
@@ -70,6 +73,5 @@ angular.module('cabalaApp').controller('MainCtrl', function ($scope, DictionaryB
     $scope.getCalculate = $core.getCalculate;
     $scope.setReset = $core.setReset;
     $scope.$parent.setReset = $core.setReset.bind($core);
-    $scope.run = $core.run;
     $core.main();
 });

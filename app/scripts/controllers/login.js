@@ -32,7 +32,7 @@ angular.module('cabalaApp').controller('LoginCtrl', function ($scope, Dictionary
                 localStorage.setItem("day", $scope.day.toString());
                 localStorage.setItem("month", $scope.month.toString());
                 localStorage.setItem("year", $scope.year.toString());
-                location.assign("./#overview");
+                location.assign("#overview");
             }
         },
         setReset: function (all) {
